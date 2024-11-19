@@ -1,7 +1,7 @@
 # linux-kernel-contributions
 This repository documents and organizes all of my contributions to the linux kernel with details about each patch submitted to the kernel.
 
-## ![Contributions](https://img.shields.io/badge/Contributions-3-brightgreen)
+## ![Contributions](https://img.shields.io/badge/Contributions-4-brightgreen)
 
 ### Contribution 1
 - **Commit ID**: `13876109`  
@@ -18,6 +18,17 @@ This repository documents and organizes all of my contributions to the linux ker
 - **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
 
 ### Contribution 3
+- **Commit ID**: `13879416`
+- **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/11/19/164)
+- **Description**: This commit fixes an unused value issue detected by Coverity (CID
+1519008). The error condition for the invalid MIPI CSI-2 is not
+properly handled as the break statement would only exit the switch block
+and not the entire loop. Fixed this by returning the error immediately
+after the switch block.
+- **Files Changed**: `drivers/media/platform/rockchip/rkisp1/rkisp1-dev.c`
+- **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
+
+### Contribution 4
 - **Commit ID**: `def5678`
 - **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/11/15/209)
 - **Description**: fixes an "Arguments in wrong order" issue detected by Coverity (CID 1376875).
