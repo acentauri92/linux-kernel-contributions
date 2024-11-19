@@ -26,7 +26,7 @@ properly handled as the break statement would only exit the switch block
 and not the entire loop. Fixed this by returning the error immediately
 after the switch block.
 - **Files Changed**: `drivers/media/platform/rockchip/rkisp1/rkisp1-dev.c`
-- **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
+- **Status**: ![Awaiting Upstream](https://img.shields.io/badge/Status-Awaiting%20Upstream-blue)
 
 ### Contribution 4
 - **Commit ID**: `def5678`
