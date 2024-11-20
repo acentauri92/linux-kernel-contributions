@@ -1,7 +1,7 @@
 # linux-kernel-contributions
 This repository documents and organizes all of my contributions to the linux kernel with details about each patch submitted to the kernel.
 
-## ![Contributions](https://img.shields.io/badge/Contributions-4-brightgreen)
+## ![Contributions](https://img.shields.io/badge/Contributions-5-brightgreen)
 
 ### Contribution 1
 - **Commit ID**: `13876109`  
@@ -29,6 +29,15 @@ after the switch block.
 - **Status**: ![Awaiting Upstream](https://img.shields.io/badge/Status-Awaiting%20Upstream-blue)
 
 ### Contribution 4
+- **Commit ID**: `df0b78a8`
+- **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/11/18/494)
+- **Description**: This commit fixes an unused value issue detected by Coverity
+(CID 1357987). The value of utime is updated but has no use as it is
+updated later on without using the stored value.
+- **Files Changed**: `kernel/sched/cputime.c`
+- **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
+
+### Contribution 5
 - **Commit ID**: `def5678`
 - **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/11/15/209)
 - **Description**: fixes an "Arguments in wrong order" issue detected by Coverity (CID 1376875).
