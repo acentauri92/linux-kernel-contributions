@@ -8,7 +8,7 @@ This repository documents and organizes all of my contributions to the linux ker
 - **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/11/15/446)
 - **Description**: Fix a useless call issue detected by Coverity (CID 1508092). The call to horrible_allowedips_lookup_v4 is unnecessary as its return value is never checked.
 - **Files Changed**: `drivers/net/wireguard/selftest/allowedips.c`
-- **Status**: ![Awaiting Upstream](https://img.shields.io/badge/Status-Awaiting%20Upstream-blue)
+- **Status**: ![Merged](https://img.shields.io/badge/Status-Merged-green)
 
 ### Contribution 2
 - **Commit ID**: `13878083`
