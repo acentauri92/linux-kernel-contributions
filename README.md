@@ -15,7 +15,7 @@ This repository documents and organizes all of my contributions to the linux ker
 - **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/11/18/100)
 - **Description**: This commit fixes a useless call issue detected by Coverity (CID 1507978). The call to rockchip_i2s_ch_to_io is unnecessary as its return value is never checked or used.
 - **Files Changed**: `sound/soc/rockchip/rockchip_i2s_tdm.c`
-- **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
+- **Status**: ![Merged](https://img.shields.io/badge/Status-Merged-green)
 
 ### Contribution 3
 - **Commit ID**: `13879416`
