@@ -38,17 +38,6 @@ updated later on without using the stored value.
 - **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
 
 ### Contribution 5
-- **Commit ID**: `db9f0e67`
-- **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/12/6/245)
-- **Description**: This commit addresses a structurally dead code issue detected by
-Coverity (CID 1602227). An integer is returned early in one of the
-switch cases causing the later statements to never be called. The
-return statement is removed following convention in the other switch
-cases.
-- **Files Changed**: `drivers/hwmon/pmbus/tps25990.c`
-- **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
-
-### Contribution 6
 - **Commit ID**: `a8ab7a54`
 - **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/12/6/308)
 - **Description**: This patch addresses the Out-of-bounds read issue detected by
@@ -60,7 +49,7 @@ results in an out-of-bounds read.
 - **Files Changed**: `drivers/net/wireless/ath/ath12k/mac.c`
 - **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
 
-### Contribution 7
+### Contribution 6
 - **Commit ID**: `def5678`
 - **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/11/15/209)
 - **Description**: fixes an "Arguments in wrong order" issue detected by Coverity (CID 1376875).
