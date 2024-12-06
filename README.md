@@ -37,7 +37,7 @@ updated later on without using the stored value.
 - **Files Changed**: `kernel/sched/cputime.c`
 - **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
 
-### Contribution 4
+### Contribution 5
 - **Commit ID**: `db9f0e67`
 - **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/12/6/245)
 - **Description**: This commit addresses a structurally dead code issue detected by
@@ -48,7 +48,19 @@ cases.
 - **Files Changed**: `drivers/hwmon/pmbus/tps25990.c`
 - **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
 
-### Contribution 5
+### Contribution 6
+- **Commit ID**: `a8ab7a54`
+- **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/12/6/308)
+- **Description**: This patch addresses the Out-of-bounds read issue detected by
+Coverity (CID 1602214). The function ath12k_mac_vdev_create() accesses
+the vif->link_conf array using link_id, which is derived from
+arvif->link_id. In cases where arvif->link_id equals 15, the index
+exceeds the bounds of the array, which contains only 15 elements.This
+results in an out-of-bounds read.
+- **Files Changed**: `drivers/net/wireless/ath/ath12k/mac.c`
+- **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
+
+### Contribution 7
 - **Commit ID**: `def5678`
 - **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/11/15/209)
 - **Description**: fixes an "Arguments in wrong order" issue detected by Coverity (CID 1376875).
