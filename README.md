@@ -38,16 +38,14 @@ updated later on without using the stored value.
 - **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
 
 ### Contribution 5
-- **Commit ID**: `a8ab7a54`
-- **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/12/6/308)
-- **Description**: This patch addresses the Out-of-bounds read issue detected by
-Coverity (CID 1602214). The function ath12k_mac_vdev_create() accesses
-the vif->link_conf array using link_id, which is derived from
-arvif->link_id. In cases where arvif->link_id equals 15, the index
-exceeds the bounds of the array, which contains only 15 elements.This
-results in an out-of-bounds read.
-- **Files Changed**: `drivers/net/wireless/ath/ath12k/mac.c`
-- **Status**: ![Under Review](https://img.shields.io/badge/Under_Review-1-yellow)
+- **Commit ID**: `d53555e3`
+- **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/12/12/497)
+- **Description**: Remove the logically dead code in the last return statement of
+amdgpu_ras_eeprom_init. The condition res < 0 is redundant since
+res is already checked for a negative value earlier. Replace
+return res < 0 ? res : 0; with return 0 to improve clarity
+- **Files Changed**: `drivers/gpu/drm/amd/amdgpu/amdgpu_ras_eeprom.c`
+- **Status**:![Awaiting Upstream](https://img.shields.io/badge/Status-Awaiting%20Upstream-blue)
 
 ### Contribution 6
 - **Commit ID**: `def5678`
