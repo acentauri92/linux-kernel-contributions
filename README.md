@@ -1,7 +1,7 @@
 # linux-kernel-contributions
 This repository documents and organizes all of my contributions to the linux kernel with details about each patch submitted to the kernel.
 
-## ![Contributions](https://img.shields.io/badge/Contributions-5-brightgreen)
+## ![Contributions](https://img.shields.io/badge/Contributions-6-brightgreen)
 
 ### Contribution 1
 - **Commit ID**: `13876109`  
@@ -45,6 +45,13 @@ amdgpu_ras_eeprom_init. The condition res < 0 is redundant since
 res is already checked for a negative value earlier. Replace
 return res < 0 ? res : 0; with return 0 to improve clarity
 - **Files Changed**: `drivers/gpu/drm/amd/amdgpu/amdgpu_ras_eeprom.c`
+- **Status**:![Awaiting Upstream](https://img.shields.io/badge/Status-Awaiting%20Upstream-blue)
+
+### Contribution 6
+- **Commit ID**: `NA` - Reported a bug
+- **Patch Link**: [lkml.org link to the patch](https://lore.kernel.org/all/20241219155719.84276-1-rf@opensource.cirrus.com/)
+- **Description**: Delete two redundant assignments in cs_dsp_test_bin.c
+- **Files Changed**: `drivers/firmware/cirrus/test/cs_dsp_test_bin.c`
 - **Status**:![Awaiting Upstream](https://img.shields.io/badge/Status-Awaiting%20Upstream-blue)
 
 ### Contribution 6
