@@ -1,7 +1,7 @@
 # linux-kernel-contributions
 This repository documents and organizes all of my contributions to the linux kernel with details about each patch submitted to the kernel.
 
-## ![Contributions](https://img.shields.io/badge/Contributions-6-brightgreen)
+## ![Contributions](https://img.shields.io/badge/Contributions-7-brightgreen)
 
 ### Contribution 1
 - **Commit ID**: `13876109`  
@@ -54,9 +54,13 @@ return res < 0 ? res : 0; with return 0 to improve clarity
 - **Files Changed**: `drivers/firmware/cirrus/test/cs_dsp_test_bin.c`
 - **Status**:![Awaiting Upstream](https://img.shields.io/badge/Status-Awaiting%20Upstream-blue)
 
-### Contribution 6
-- **Commit ID**: `def5678`
-- **Patch Link**: [lkml.org link to the patch](https://lkml.org/lkml/2024/11/15/209)
-- **Description**: fixes an "Arguments in wrong order" issue detected by Coverity (CID 1376875).
-- **Files Changed**: `net/batman-adv/distributed-arp-table.c`
-- **Status**: ![Rejected](https://img.shields.io/badge/Status-Rejected-red)
+### Contribution 7
+- **Commit ID**: `8ccc5947`
+- **Patch Link**: [lkml.org link to the patch](https://lore.kernel.org/all/20250108050916.52721-1-dheeraj.linuxdev@gmail.com/)
+- **Description**: The oxid variable in fdls_process_abts_req() was only being initialized
+inside the if (tport) block, but was being used in a debug print statement
+after that block. If tport was NULL, oxid would remain uninitialized.  Move
+the oxid initialization to happen at declaration using
+FNIC_STD_GET_OX_ID(fchdr).
+- **Files Changed**: `drivers/scsi/fnic/fdls_disc.c b/drivers/scsi/fnic/fdls_disc.c`
+- **Status**:![Awaiting Upstream](https://img.shields.io/badge/Status-Awaiting%20Upstream-blue)
