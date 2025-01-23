@@ -1,7 +1,7 @@
 # linux-kernel-contributions
 This repository documents and organizes all of my contributions to the linux kernel with details about each patch submitted to the kernel.
 
-## ![Contributions](https://img.shields.io/badge/Contributions-7-brightgreen)
+## ![Contributions](https://img.shields.io/badge/Contributions-8-brightgreen)
 
 ### Contribution 1
 - **Commit ID**: `13876109`  
@@ -63,4 +63,15 @@ after that block. If tport was NULL, oxid would remain uninitialized.  Move
 the oxid initialization to happen at declaration using
 FNIC_STD_GET_OX_ID(fchdr).
 - **Files Changed**: `drivers/scsi/fnic/fdls_disc.c b/drivers/scsi/fnic/fdls_disc.c`
+- **Status**:![Awaiting Upstream](https://img.shields.io/badge/Status-Awaiting%20Upstream-blue)
+
+  ### Contribution 8
+- **Commit ID**: `61dc1fd9`
+- **Patch Link**: [lkml.org link to the patch](https://git.kernel.org/pub/scm/linux/kernel/git/netdev/net.git/commit/?id=61dc1fd9205b)
+- **Description**: Implement cleanup of descriptors in the TSO error path of
+fec_enet_txq_submit_tso(). The cleanup
+1. Unmaps DMA buffers for data descriptors skipping TSO header
+2. Clears all buffer descriptors
+3. Handles extended descriptors by clearing cbd_esc when enabled
+- **Files Changed**: `drivers/net/ethernet/freescale/fec_main.c`
 - **Status**:![Awaiting Upstream](https://img.shields.io/badge/Status-Awaiting%20Upstream-blue)
